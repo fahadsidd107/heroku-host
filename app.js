@@ -1,5 +1,5 @@
 const express = require('express')
-const port = 7000
+const port = process.env.PORT || 7000
 const app = express()
 
 
@@ -17,6 +17,6 @@ app.delete('/profile', (req, res) => {
 })
 
 
-app.listen(process.env.PORT || port, () => {
+app.listen( port, () => {
     console.log(`Example app listening at http://localhost:${port}`)
 })
